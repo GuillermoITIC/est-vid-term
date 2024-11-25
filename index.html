@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Videos 3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Galería 3D</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="showSection('personal')">Personal</a></li>
+            <li><a href="#" onclick="showSection('infraestructura')">Infraestructura</a></li>
+            <li><a href="#" onclick="showSection('objeto')">Objeto</a></li>
+        </ul>
+    </nav>
+    <!-- Sección de Inicio -->
+    <div class="carousel-container" id="inicio">
+        <div class="carousel">
+            <div class="carousel-item">
+                <video src="videos/personal_lejano.mp4" controls></video>
+                <p>Video desde la perspectiva lejana del Personal</p>
+            </div>
+            <div class="carousel-item">
+                <video src="videos/personal_cercano.mp4" controls></video>
+                <p>Video desde la perspectiva cercana del Personal</p>
+            </div>
+            <div class="carousel-item">
+                <video src="videos/personal_medio.mp4" controls></video>
+                <p>Video desde la perspectiva media del Personal</p>
+            </div>
+            <!-- Puedes agregar más videos aquí -->
+        </div>
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+    </div>
+    <!-- Sección de Personal -->
+    <div class="carousel-container" id="personal" style="display: none;">
+        <div class="carousel">
+            <div class="carousel-item">
+                <video src="videos/personal_izquierda.mp4" controls></video>
+                <p>Video desde la perspectiva izquierda del Personal</p>
+            </div>
+            <div class="carousel-item">
+                <video src="videos/personal_derecha.mp4" controls></video>
+                <p>Video desde la perspectiva derecha del Personal</p>
+            </div>
+        </div>
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+    </div>
+    <!-- Sección de Infraestructura -->
+    <div class="carousel-container" id="infraestructura" style="display: none;">
+        <div class="carousel">
+            <div class="carousel-item">
+                <video src="videos/infraestructura_izquierda.mp4" controls></video>
+                <p>Video desde la perspectiva izquierda de Infraestructura</p>
+            </div>
+            <div class="carousel-item">
+                <video src="videos/infraestructura_derecha.mp4" controls></video>
+                <p>Video desde la perspectiva derecha de Infraestructura</p>
+            </div>
+        </div>
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+    </div>
+    <!-- Sección de Objeto -->
+    <div class="carousel-container" id="objeto" style="display: none;">
+        <div class="carousel">
+            <div class="carousel-item">
+                <video src="videos/objeto_izquierda.mp4" controls></video>
+                <p>Video desde la perspectiva izquierda de un Objeto</p>
+            </div>
+            <div class="carousel-item">
+                <video src="videos/objeto_derecha.mp4" controls></video>
+                <p>Video desde la perspectiva derecha de un Objeto</p>
+            </div>
+        </div>
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+    </div>
+    <footer class="blurred-footer">
+        <p>&copy; Todos los derechos reservados. Autor: Guillermo Martinez
+            <br> @2024 Visión Estereoscópica.</br>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

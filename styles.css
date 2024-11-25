@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('Video/Fondo.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.9;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 100px auto 70px; /* Espacio entre la barra de navegación y el footer */
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+    padding: 20px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item video {
+    width: 60%; /* Ajusta el tamaño del video */
+    display: block;
+    margin: 0 auto; /* Centra el video horizontalmente */
+    border-radius: 10px;
+}
+
+/* Ajuste del texto para que esté más arriba y no se superponga en las imágenes */
+.carousel-item p {
+    position: absolute;
+    top: -40px; /* Ajusta este valor para mover el texto más arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+/* Ajuste de la barra de navegación para que las secciones no se corten */
+.nav-links li {
+    white-space: nowrap; /* Evita que las palabras se corten en la barra de navegación */
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Footer */
+.blurred-footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
